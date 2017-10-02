@@ -1,2 +1,25 @@
-<h1>Countries#edit</h1>
-<p>Find me in app/views/countries/edit.html.erb</p>
+<h1>Edit</h1>
+
+<%= form_tag("/countries/#{@id}", method: "put") do %>
+  <%= label_tag(:name, "Country Name: ") %>
+  <%= text_field_tag(:name) %>
+  <br>
+  <br>
+  <%= label_tag(:population, "Population: ") %>
+  <%= text_field_tag(:population) %>
+  <br>
+  <br>
+  <%= label_tag(:flag, "Flag Image URL: ") %>
+  <%= text_field_tag(:flag) %>
+  <br>
+  <br>
+  <%= label_tag(:first_lang, "First Language: ") %>
+  <%= text_field_tag(:first_lang) %>
+  <br>
+  <br>
+  <%= label_tag(:president, "President: ") %>
+  <%= text_field_tag(:president) %>
+  <br>
+
+  <%= submit_tag("Submit") %>
+<% end %>

@@ -11,6 +11,8 @@ class CountriesController < ApplicationController
   end
 
   def edit
+    @id = params[:id].to_i
+    @movie = Country.find(@id)
   end
 
   def create
