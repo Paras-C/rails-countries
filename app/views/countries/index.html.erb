@@ -8,4 +8,5 @@
 <p><strong>President: </strong><%= country.president %></p>
 <a href="/countries/<%= country.id %>">View</a>
 <a href="/countries/<%= country.id %>/edit">Edit</a>
+<%= link_to 'Delete', country, method: :delete %>
 <% end %>
