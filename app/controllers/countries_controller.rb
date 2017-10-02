@@ -6,6 +6,8 @@ class CountriesController < ApplicationController
   end
 
   def show
+    id = params[:id].to_i
+    @country = Country.find(id)
   end
 
   def edit
